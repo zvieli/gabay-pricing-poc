@@ -1,0 +1,45 @@
+# Credentials (at any directory depth).
+.env*
+
+# Private local demo inputs, checkpoints, reports and screenshots.
+/.local-demo/
+
+# Python environments, bytecode, build artifacts and test caches.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+build/
+dist/
+
+# Original inputs and potentially sensitive datasets.
+/DATA/*
+/קבוצת גבאי משימת בית.txt
+*.xlsx
+*.xls
+*.xlsm
+*.csv
+*.parquet
+*.sqlite
+*.sqlite3
+**/sensitive/
+**/pii/
+
+# Raw provider evidence is local-only.
+**/RAW_SAMPLES/
+**/raw/
+**/raw_responses/
+**/raw_transactions/
+/docs/data-source-audit.zip
+
+# Keep empty local output directories, not their generated contents.
+/poc/data/snapshots/*
+!/poc/data/snapshots/.gitkeep
+/poc/reports/*
+!/poc/reports/.gitkeep
+/docs/*
+!/docs/implementation/

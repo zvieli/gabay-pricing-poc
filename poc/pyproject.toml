@@ -1,0 +1,26 @@
+[project]
+name = "gabay-pricing"
+version = "0.1.0"
+description = "Deterministic apartment pricing decision support with a bounded Groq analyst."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "httpx",
+    "pydantic",
+    "openpyxl",
+    "python-dotenv",
+    "openai>=1.0,<3",
+]
+
+[project.scripts]
+gabay-pricing = "gabay_pricing.cli:main"
+
+[dependency-groups]
+dev = ["pytest"]
+
+[build-system]
+requires = ["uv_build==0.12.5"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
